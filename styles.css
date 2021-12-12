@@ -1,0 +1,1453 @@
+/* improting Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+
+/* Variables Declaration */
+
+:root {
+    --primary-font: roboto;
+    --secondary-font: poppins;
+    --home-font: lobster;
+    --box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    --primary-color: #FF0036;
+    --img-overlay: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+
+/* utility classes start*/
+
+.sp {
+    color: var(--primary-color);
+}
+
+.h2 {
+    font-family: lobster;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+
+.roboto {
+    font-family: roboto;
+    font-weight: bold;
+}
+
+
+/* utility classes end */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--secondary-font);
+}
+
+.main-container {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+
+/* home section starts */
+
+.main-container .home {
+    width: 100%;
+    height: 100vh;
+    background-image: var(--img-overlay), url(img/home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.main-container .home .navbar {
+    background-color: var(--primary-color);
+    padding: 5px 20px;
+}
+
+.home .navbar .navbar-nav .nav-link {
+    color: #fff;
+    padding: 5px 4px;
+    margin: 0 8px;
+    position: relative;
+}
+
+.home .navbar .navbar-nav .nav-link::after {
+    content: '';
+    transform: scaleX(0%);
+    height: 2px;
+    display: block;
+    background-color: #fff;
+    transform-origin: 50% 50%;
+    transition: 0.2s ease;
+}
+
+.home .navbar .navbar-nav .nav-link:hover::after {
+    transform: scaleX(100%);
+}
+
+.home .navbar .navbar-brand {
+    font-size: 42px;
+    font-family: var(--home-font);
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 0;
+}
+
+.call {
+    width: 140px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 3px;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+    line-height: 37px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+.call a {
+    color: #fff;
+    transition: 0.3s ease;
+    font-weight: 300;
+}
+
+.call:hover {
+    background-color: #fff;
+    border-color: var(--primary-color);
+}
+
+.call:hover a {
+    color: var(--primary-color);
+}
+
+.home-heading h1 {
+    font-family: dancing script;
+    font-weight: 700;
+    color: #fff;
+    font-size: 45px;
+}
+
+.home-content {
+    padding-top: 220px;
+}
+
+.home-content .btn-1 {
+    border: 2px solid var(--primary-color);
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transition: 0.25s ease;
+}
+
+.home-content .btn-1:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: #fff;
+}
+
+
+/* home section ends */
+
+
+/* menu section starts */
+
+.menu {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.menu .menu-title {
+    padding: 75px 0;
+}
+
+.menu-card {
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 7px;
+    padding: 20px 20px 10px;
+    margin: 5px 14px;
+}
+
+.menu-card .image {
+    width: 70px!important;
+}
+
+.food-ratings {
+    margin-top: 6px;
+}
+
+.card-content {
+    margin-top: 5px;
+}
+
+.food-ratings i {
+    color: #FFA726;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+}
+
+.food-menu-title {
+    padding: 40px 0 30px;
+}
+
+.food-card {
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.food-card-content h3 {
+    font-weight: 700;
+    font-family: roboto;
+    font-size: 27px;
+}
+
+.btn-2 {
+    color: var(--primary-color);
+    padding: 4px 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 1;
+}
+
+.btn-2::after {
+    content: '';
+    width: 0;
+    height: 105%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: 0.2s ease;
+}
+
+.btn-2:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.btn-2:hover {
+    color: #fff;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+}
+
+.owl-carousel .owl-dots {
+    display: block;
+}
+
+.owl-carousel button.owl-dot {
+    display: inline-block;
+    width: 28px;
+    height: 5px;
+    background-color: #dddddd;
+    border-radius: 4px;
+    margin: 0 8px;
+    transition: 0.2s ease;
+}
+
+.owl-carousel button.owl-dot:focus {
+    outline: none;
+}
+
+.owl-carousel button.owl-dot.active {
+    background-color: var(--primary-color);
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    font-size: 50px;
+    color: var(--primary-color);
+    position: absolute;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev:focus {
+    outline: none;
+}
+
+
+/* Menu section ends */
+
+
+/*=========================
+Testimonial section starts
+===========================*/
+
+.testimonial {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.testimonial-title {
+    padding: 75px 0 30px;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    position: relative;
+    padding: 50px 20px 15px;
+}
+
+.testimonial-card img {
+    width: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+    margin-left: -43px;
+    transform: translateX(-50%);
+    border: 3px solid #fff;
+    box-shadow: var(--box-shadow);
+    animation: pulse 2s ease infinite 0s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.94);
+        box-shadow: 0 0 0 rgba(255, 0, 54, 0.5);
+    }
+    50% {
+        transform: scale(1);
+        box-shadow: 0 0 0 12px rgba(255, 0, 54, 0);
+    }
+    100% {
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0px rgba(255, 0, 54, 0);
+    }
+}
+
+.testimonial-card-content span {
+    font-family: lobster;
+    letter-spacing: 1px;
+}
+
+.effects i {
+    position: absolute;
+    bottom: 16px;
+    right: 12px;
+    color: var(--primary-color);
+    animation: fade 0.8s ease infinite 0s alternate;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    1000% {
+        opacity: 1;
+    }
+}
+
+
+/*=========================
+Testimonial section ends
+===========================*/
+
+
+/*==========================
+How it works section starts
+============================*/
+
+.how-works {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.how-works-title {
+    padding: 40px 0 20px;
+}
+
+.how-card {
+    padding: 20px 10px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.how-card-icon+h4 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.how-card:hover {
+    transform: translateY(-10px);
+}
+
+
+/*=======================
+How it works section ends
+=========================*/
+
+
+/*=========================
+Download App section starts
+===========================*/
+
+.download-app {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.download-heading {
+    padding: 30px 0 10px;
+}
+
+.download-heading h1 {
+    font-weight: bold;
+}
+
+.download-home-img img {
+    max-width: 250px;
+    width: 100%;
+    animation: bounce 1.5s ease-in-out infinite 0s alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/*=======================
+Download App section ends
+=========================*/
+
+
+/*=======================
+chefs section starts
+=========================*/
+
+.chefs {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.chefs-card img {
+    width: 100%;
+    height: auto;
+}
+
+.chefs-heading {
+    padding: 75px 0 30px;
+}
+
+.chefs-card {
+    background: #ffff;
+    box-shadow: var(--box-shadow);
+    margin: 5px 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.chef-card-img {
+    background: #d63031;
+}
+
+.chef-card-content span {
+    font-family: lobster;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.chef-card-content h3 {
+    font-family: roboto;
+    font-weight: bold;
+}
+
+.chef-card-content {
+    padding: 5px 20px;
+}
+
+
+/*=======================
+chefs section ends
+=========================*/
+
+
+/*=======================
+about us section starts
+=========================*/
+
+.about-us {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.about-us-heading {
+    padding: 75px 0 20px;
+}
+
+.about-us-content h1 {
+    font-family: roboto;
+    font-weight: bold;
+}
+
+.about-us-card {
+    background-color: var(--primary-color);
+    padding: 25px 15px;
+    border-radius: 4px;
+}
+
+.about-us-card h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 40px;
+}
+
+.about-us-img img {
+    animation: zoom 3s ease-in-out infinite 0s alternate;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.98);
+    }
+}
+
+
+/*=======================
+about us section ends
+=========================*/
+
+
+/*=======================
+contact us section starts
+=========================*/
+
+.contact-us {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.contact-us-heading {
+    padding: 75px 0 30px;
+}
+
+.location {
+    position: relative;
+    padding-left: 60px;
+}
+
+.location i {
+    width: 45px;
+    height: 45px;
+    color: var(--primary-font);
+    text-align: center;
+    font-size: 25px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    line-height: 39px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.location p {
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 20px 25px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+}
+
+.form-group {
+    margin: 12px;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+input[type="email"]:focus {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+input[type="tel"]:focus {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+form input::placeholder {
+    font-family: raleway;
+    font-weight: 300;
+}
+
+.form-group textarea {
+    border: 2px solid transparent;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    padding: 8px 13px;
+    border-radius: 20px;
+}
+
+form textarea::placeholder {
+    font-family: raleway;
+    font-weight: 300;
+}
+
+.form-group textarea:focus {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-3 {
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    padding: 3px 20px;
+    border-radius: 20px;
+    color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-3::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    background: var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.2s ease;
+}
+
+.btn-3:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.btn-3:hover {
+    color: #fff;
+}
+
+.btn-3 i {
+    color: var(--primary-color);
+    font-size: 35px;
+}
+
+
+/*=======================
+contact us section ends
+=========================*/
+
+
+/*=======================
+Faq section starts
+=========================*/
+
+.faq {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.faq-heading {
+    padding: 75px 0px 20px;
+}
+
+.faq-title {
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.faq-title h5 {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.faq-title::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    content: '\f106';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.faq-title.collapsed::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    content: '\f107';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.faq-title:not(.collapsed)::before {
+    color: #fff;
+}
+
+.faq-title:not(.collapsed) {
+    background-color: var(--primary-color);
+}
+
+.faq-title:not(.collapsed) h5 {
+    color: #fff;
+}
+
+.accordion-body {
+    padding: 10px 20px;
+    background: ghostwhite;
+}
+
+.ac {
+    margin-bottom: 25px;
+}
+
+
+/*=======================
+faq section ends
+=========================*/
+
+
+/*=======================
+Footer section starts
+=========================*/
+
+footer {
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/footer.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-4 {
+    color: #fff;
+    border: 2px solid var(--primary-color);
+    padding: 3px 20px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-4::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    background: var(--primary-color);
+}
+
+.btn-4:hover::after {
+    width: 100%;
+}
+
+.btn-4:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.social-media-heading h3 {
+    color: #fff;
+    font-family: lobster;
+    letter-spacing: 1px;
+}
+
+.social-media-icons i {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 12px;
+    animation: pulse_2 2s ease-in-out infinite 0s;
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--primary-color);
+    line-height: 48px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+@keyframes pulse_2 {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 0, 54, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 0 16px rgba(255, 0, 54, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(255, 0, 54, 0);
+    }
+}
+
+.navbar button {
+    outline: none;
+    border: none;
+}
+
+.toggler-icon {
+    color: #fff;
+}
+
+
+/*=======================
+Footer section ends
+=========================*/
+
+
+/*================================== 
+Responsive For Small Screen Devices 
+====================================*/
+
+@media only screen and (max-width: 520px) {
+    .main-container .home .navbar {
+        padding: 3px 8px;
+    }
+    .home .navbar .navbar-nav .nav-link {
+        padding: 2px;
+        margin: 5px 0px;
+        font-size: 14px;
+    }
+    .home .navbar .navbar-nav {
+        text-align: center;
+    }
+    .call {
+        margin: 10px auto;
+    }
+    .home .navbar .navbar-nav .nav-link::after {
+        content: none;
+    }
+    .home .navbar .navbar-brand {
+        font-size: 30px;
+    }
+    .home-heading h1 {
+        font-size: 28px;
+    }
+    .menu .menu-title {
+        padding: 25px 0px 25px;
+    }
+    .h2 {
+        font-size: 30px;
+    }
+    .food-card {
+        margin-bottom: 20px;
+    }
+    .testimonial-title {
+        padding: 10px 0px 35px;
+    }
+    .testimonial-card {
+        margin-bottom: 70px;
+    }
+    .testimonial-card:nth-child(3) {
+        margin-bottom: 0;
+    }
+    .how-works-title {
+        padding: 20px 0;
+    }
+    .how-card {
+        margin-bottom: 30px;
+    }
+    .download-heading {
+        padding: 15px 0;
+    }
+    .download-title h1 {
+        font-size: 26px;
+    }
+    .download-title h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .download-img {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .download-img img {
+        width: 120px!important;
+    }
+    .chefs-heading {
+        padding: 30px 0;
+    }
+    .about-us-heading {
+        padding: 20px 0;
+    }
+    .about-us-content h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .about-us-content p {
+        font-size: 15px;
+        text-align: justify;
+    }
+    .about-us-card {
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+    .faq-heading {
+        padding: 20px 0;
+    }
+    .faq-title h5 {
+        font-size: 12px;
+    }
+    .contact-us-heading {
+        padding: 30px 0px;
+    }
+    .faq {
+        padding-bottom: 10px;
+    }
+    .sub-title h4 {
+        text-align: center;
+        font-size: 20px;
+    }
+    .adress {
+        margin-bottom: 30px;
+    }
+    .social-media-heading h3 {
+        font-size: 20px;
+    }
+    .copyright p {
+        font-size: 14px;
+    }
+    .call {
+        width: 120px;
+        height: 30px;
+        line-height: 26px;
+    }
+    .call a {
+        color: #fff;
+        transition: 0.3s ease;
+        font-weight: 300;
+    }
+    .call a i {
+        font-size: 13px;
+    }
+    .call a span {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 567px) {
+    .home-heading h1 {
+        font-size: 34px;
+    }
+    .home .navbar .navbar-brand {
+        font-size: 24px;
+    }
+    .home .navbar .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+    .home .navbar .navbar-nav {
+        text-align: center;
+    }
+    .call {
+        margin: 10px auto;
+    }
+    .home .navbar .navbar-nav .nav-link::after {
+        content: none;
+    }
+    .call {
+        width: 120px;
+        height: 30px;
+        line-height: 26px;
+    }
+    .call a {
+        color: #fff;
+        transition: 0.3s ease;
+        font-weight: 300;
+    }
+    .call a i {
+        font-size: 13px;
+    }
+    .call a span {
+        font-size: 13px;
+    }
+    .menu .menu-title {
+        padding: 26px 0px;
+    }
+    .menu .menu-title h1 {
+        font-size: 36px;
+    }
+    .menu-card .card-content h3 {
+        font-size: 20px;
+    }
+    .food-menu-title {
+        padding: 26px 0;
+    }
+    .food-menu-title h2 {
+        font-size: 36px;
+    }
+    .food-card {
+        margin-bottom: 20px;
+    }
+    .testimonial-card {
+        margin-bottom: 60px;
+    }
+    .how-works-title {
+        padding: 26px 0 18px;
+    }
+    .how-card {
+        margin-bottom: 20px;
+    }
+    .dh h1 {
+        font-size: 31px;
+    }
+    .download-title h1 {
+        font-size: 26px!important;
+    }
+    .download-title p {
+        font-size: 13px;
+    }
+    .download-title h3 {
+        font-size: 18px;
+    }
+    .download-img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .download-img img {
+        width: 130px!important;
+    }
+    .chefs-heading {
+        padding: 26px 0 18px;
+    }
+    .chefs-heading h2 {
+        font-size: 31px;
+    }
+    .about-us-heading {
+        padding: 26px 0 20px;
+    }
+    .about-us-heading h2 {
+        font-size: 34px!important;
+    }
+    .about-us-content h1 {
+        font-size: 30px;
+    }
+    .about-us-content p {
+        font-size: 14px;
+        margin-bottom: 15px!important;
+    }
+    .about-us-card {
+        margin-bottom: 15px;
+    }
+    .faq-heading {
+        padding: 25px 0 20px;
+    }
+    .faq-heading h1 {
+        font-size: 33px;
+    }
+    .faq-title h5 {
+        font-size: 14px;
+    }
+    .contact-us-heading {
+        padding: 25px 0 24px;
+    }
+    .contact-us-heading h1 {
+        font-size: 33px;
+    }
+    .contact-us .contact-tagline {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+    .home-heading h1 {
+        font-size: 42px;
+    }
+    .home .navbar .navbar-brand {
+        font-size: 26px;
+    }
+    .home .navbar .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+    .home .navbar .navbar-nav {
+        text-align: center;
+    }
+    .call {
+        margin: 10px auto;
+    }
+    .home .navbar .navbar-nav .nav-link::after {
+        content: none;
+    }
+    .menu .menu-title {
+        padding: 26px 0px;
+    }
+    .menu .menu-title h1 {
+        font-size: 33px;
+    }
+    .menu-card .card-content h3 {
+        font-size: 20px;
+    }
+    .food-menu-title {
+        padding: 26px 0;
+    }
+    .food-menu-title h2 {
+        font-size: 33px;
+    }
+    .food-card {
+        margin-bottom: 20px;
+    }
+    .food-card-content h3 {
+        font-size: 20px;
+    }
+    .testimonial-card {
+        margin-bottom: 60px;
+    }
+    .testimonial-title {
+        padding: 20px 0 40px;
+    }
+    .testimonial-title h2 {
+        font-size: 35px;
+    }
+    .how-works-title {
+        padding: 22px 0 18px;
+    }
+    .how-card {
+        margin-bottom: 27px;
+    }
+    .how-works-title h1 {
+        font-size: 34px;
+    }
+    .download-title h1 {
+        font-size: 28px;
+    }
+    .dh h1 {
+        font-size: 34px;
+    }
+    .download-title p {
+        font-size: 15px;
+    }
+    .download-title h3 {
+        font-size: 20px;
+    }
+    .download-img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .download-img img {
+        width: 130px!important;
+    }
+    .chefs-heading h2 {
+        font-size: 34px;
+    }
+    .chefs-heading {
+        padding: 26px 0 18px;
+    }
+    .about-us-heading {
+        padding: 26px 0 20px;
+    }
+    .about-us-heading h2 {
+        font-size: 37px!important;
+    }
+    .about-us-content h1 {
+        font-size: 32px;
+    }
+    .about-us-content p {
+        font-size: 14px;
+        margin-bottom: 15px!important;
+    }
+    .about-us-card {
+        margin-bottom: 15px;
+    }
+    .faq-heading {
+        padding: 25px 0 20px;
+    }
+    .faq-heading h1 {
+        font-size: 35px;
+    }
+    .faq-title h5 {
+        font-size: 16px;
+    }
+    .contact-us-heading {
+        padding: 25px 0 24px;
+    }
+    .contact-us-heading h1 {
+        font-size: 35px;
+    }
+    .contact-us .contact-tagline {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 810px) {
+    .home-heading h1 {
+        font-size: 38px;
+    }
+    .home .navbar .navbar-brand {
+        font-size: 26px;
+    }
+    .home .navbar .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+    .home .navbar .navbar-nav {
+        text-align: center;
+    }
+    .call {
+        margin: 10px auto;
+    }
+    .home .navbar .navbar-nav .nav-link::after {
+        content: none;
+    }
+    .menu .menu-title {
+        padding: 20px 0px;
+    }
+    .food-card {
+        margin-bottom: 20px;
+    }
+    .testimonial-card {
+        margin-bottom: 60px;
+    }
+    .testimonial-title {
+        padding: 20px 0 40px;
+    }
+    .testimonial-title h2 {
+        font-size: 37px;
+    }
+    .how-works-title {
+        padding: 22px 0 18px;
+    }
+    .how-card {
+        margin-bottom: 27px;
+    }
+    .how-works-title h1 {
+        font-size: 36px;
+    }
+    .download-title h1 {
+        font-size: 28px;
+    }
+    .download-title p {
+        font-size: 16px;
+    }
+    .download-title h3 {
+        font-size: 22px;
+    }
+    .download-img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .download-img img {
+        width: 130px!important;
+    }
+    .dh h1 {
+        font-size: 37px;
+    }
+    .chefs-heading h2 {
+        font-size: 37px;
+    }
+    .chefs-heading {
+        padding: 26px 0 18px;
+    }
+    .about-us-heading {
+        padding: 26px 0 20px;
+    }
+    .about-us-heading h2 {
+        font-size: 40px!important;
+    }
+    .about-us-content h1 {
+        font-size: 34px;
+    }
+    .about-us-content p {
+        font-size: 16px;
+        margin-bottom: 15px!important;
+    }
+    .about-us-card {
+        margin-bottom: 10px;
+    }
+    .faq-heading {
+        padding: 25px 0 20px;
+    }
+    .faq-heading h1 {
+        font-size: 36px;
+    }
+    .contact-us-heading {
+        padding: 25px 0 24px;
+    }
+    .contact-us-heading h1 {
+        font-size: 37px;
+    }
+    .contact-us .contact-tagline {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 811px) and (max-width: 991px) {
+    .home-heading h1 {
+        font-size: 44px;
+    }
+    .home .navbar .navbar-brand {
+        font-size: 28px;
+    }
+    .home .navbar .navbar-nav .nav-link {
+        padding: 2px;
+        margin: 5px 0;
+        font-size: 18px;
+    }
+    .home .navbar .navbar-nav {
+        text-align: center;
+    }
+    .call {
+        margin: 10px auto;
+    }
+    .home .navbar .navbar-nav .nav-link::after {
+        content: none;
+    }
+    .menu .menu-title {
+        padding: 23px 0px;
+    }
+    .food-card {
+        margin-bottom: 20px;
+    }
+    .testimonial-card {
+        margin-bottom: 60px;
+    }
+    .testimonial-title {
+        padding: 20px 0 40px;
+    }
+    .testimonial-title h2 {
+        font-size: 39px;
+    }
+    .how-works-title {
+        padding: 22px 0 18px;
+    }
+    .how-card {
+        margin-bottom: 27px;
+    }
+    .how-works-title h1 {
+        font-size: 38px;
+    }
+    .download-title h1 {
+        font-size: 30px;
+    }
+    .download-title p {
+        font-size: 16px;
+    }
+    .download-title h3 {
+        font-size: 24px;
+    }
+    .download-img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .download-img img {
+        width: 130px!important;
+    }
+    .dh h1 {
+        font-size: 40px;
+    }
+    .chefs-heading h2 {
+        font-size: 40px;
+    }
+    .chefs-heading {
+        padding: 26px 0 18px;
+    }
+    .about-us-heading {
+        padding: 26px 0 20px;
+    }
+    .about-us-heading h2 {
+        font-size: 42px!important;
+    }
+    .about-us-content h1 {
+        font-size: 36px;
+    }
+    .about-us-content p {
+        font-size: 17px;
+        margin-bottom: 15px!important;
+    }
+    .about-us-card {
+        margin-bottom: 10px;
+    }
+    .faq-heading {
+        padding: 25px 0px 20px;
+    }
+    .faq-heading h1 {
+        font-size: 36px;
+    }
+    .contact-us-heading {
+        padding: 25px 0 24px;
+    }
+    .contact-us-heading h1 {
+        font-size: 37px;
+    }
+    .contact-us .contact-tagline {
+        font-size: 25px;
+    }
+    .testimonial-title h2 {
+        font-size: 35px;
+    }
+}
